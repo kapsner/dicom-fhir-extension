@@ -27,11 +27,11 @@ class ImagingStudySeriesErlangen(fr.imagingstudy.ImagingStudySeries):
         # if property is element of this resource.
         element_property=True,
     )
-    echoTimes__ext: fr.fhirtypes.Decimal = Field(
+    echoTime__ext: fr.fhirtypes.Decimal = Field(
         None,
-        alias="echoTimes",
+        alias="echoTime",
         title="Echo Time",
-        description="Echo Times",
+        description="Echo Time",
         # if property is element of this resource.
         element_property=True,
     )
@@ -60,5 +60,5 @@ class ImagingStudySeriesErlangen(fr.imagingstudy.ImagingStudySeries):
             "instance",
             "scanningSequence",
             "scanningVariant",
-            "echoTimes",
+            "echoTime",
         ]
