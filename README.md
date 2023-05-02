@@ -16,9 +16,13 @@ Currently added fields are:
 ## Getting Started
 
 ```bash
+# clone repos
 git clone https://github.com/kapsner/dicom-fhir-converter
 git clone https://github.com/kapsner/dicom-fhir-extension
+
+# install dicom-fhir-converter
 cd dicom-fhir-converter
+pip install -e .
 ```
 
 ```python
