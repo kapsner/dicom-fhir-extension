@@ -11,3 +11,27 @@ Currently added fields are:
 | MR | Scanning Sequence | 0018,0020 | Coding |
 | MR | Scanning Variant | 0018,0021 | Codeable Concept |
 | MR | Echo Time | 0018,0081 | Decimal |
+
+
+## Getting Started
+
+```bash
+git clone https://github.com/kapsner/dicom-fhir-converter
+git clone https://github.com/kapsner/dicom-fhir-extension
+cd dicom-fhir-converter
+```
+
+```python
+from dicom2fhir import dicom2fhir
+import json
+
+root_path = "/path/to/dcm_imgaing_study/"
+
+results = dicom2fhir.process_dicom_2_fhir(root_path)
+
+jsonfile = "example_imagingStudy.json"
+
+
+with open(jsonfile, "w+") as outfile:
+    outfile.write(_res.json())
+```
