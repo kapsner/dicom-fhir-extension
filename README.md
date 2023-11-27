@@ -37,5 +37,5 @@ jsonfile = "example_imagingStudy.json"
 
 
 with open(jsonfile, "w+") as outfile:
-    outfile.write(_res.json())
+    outfile.write(results.json())
 ```
