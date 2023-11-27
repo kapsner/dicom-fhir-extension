@@ -2,7 +2,7 @@
 
 __author__ = "Lorenz A. Kapsner"
 
-from fhir import resources as fr
+from fhir.resources import R4B as fr
 import typing
 from pydantic import Field
 
@@ -51,19 +51,19 @@ class ImagingStudyErlangen(fr.imagingstudy.ImagingStudy):
             "encounter",
             "started",
             "basedOn",
-            "partOf",
             "referrer",
             "endpoint",
             "numberOfSeries",
             "numberOfInstances",
-            "procedure",
+            "procedureCode",
             "location",
-            "reason",
+            "reasonCode",
             "note",
             "description",
-            # "series",
-            "laterality",
-            "bodySite",
+            "series"
+            # "laterality", # kann man so nicht definieren, sonst kommt keine valide FHIR Ressource raus 
+                            # --> eigene StructureDefinition und dann als extension in der ImagingStudy definieren
+            # "bodySite",
         ]
 
 
@@ -125,8 +125,8 @@ class ImagingStudySeriesErlangen(fr.imagingstudy.ImagingStudySeries):
             "specimen",
             "started",
             "performer",
-            "instance",
-            "scanningSequence",
-            "scanningVariant",
-            "echoTime",
+            "instance"
+            # "scanningSequence", # siehe oben!
+            # "scanningVariant",
+            # "echoTime",
         ]
